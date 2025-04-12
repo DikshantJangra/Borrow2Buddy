@@ -6,7 +6,7 @@ const LoginSignup = () => {
   return (
     <>
         {/* Parent Div */}
-        <div className='h-screen w-full bg-black flex justify-center items-center'>
+        <div className='h-screen w-full bg-black/90 flex justify-center items-center'>
             {/* Login form page */}
             <div className='sm:h-150 h-130 w-90 sm:w-120 bg-white/8 font-Popins mb-20 rounded-2xl text-white p-5'>
                 <div className='flex flex-col items-center justify-center'>

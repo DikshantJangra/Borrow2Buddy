@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import { GiTakeMyMoney } from "react-icons/gi";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
+
 const Landing = () => {
   return (
     <>

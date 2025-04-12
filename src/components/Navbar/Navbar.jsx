@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaMoneyBillTransfer } from "react-icons/fa6";
-import { Router, Link, NavLink  } from 'react-router-dom';
+import {Link  } from 'react-router-dom';
 
 const Navbar = () => {
   

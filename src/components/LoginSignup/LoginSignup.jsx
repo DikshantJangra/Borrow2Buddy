@@ -178,7 +178,7 @@
 
 import { FaMoneyBillTransfer } from "react-icons/fa6";
 import { AiOutlineUserSwitch, AiOutlineLock } from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { auth } from './firebase';
 import {
@@ -196,6 +196,7 @@ const LoginSignup = () => {
   const [errors, setErrors] = useState({ email: '', password: '' });
 
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -234,6 +235,7 @@ const LoginSignup = () => {
       try {
         await signInWithEmailAndPassword(auth, formData.email, formData.password);
         console.log("Login Successful");
+        navigate('/Dashboard')
       } catch (error) {
         console.error("Login Error:", error.message);
       }
@@ -244,6 +246,7 @@ const LoginSignup = () => {
     try {
       await signInWithPopup(auth, googleProvider);
       console.log("Google Sign-In Successful");
+      navigate('/Dashboard')
     } catch (error) {
       console.error("Google Sign-In Error:", error.message);
     }

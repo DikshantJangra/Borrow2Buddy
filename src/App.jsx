@@ -1,5 +1,5 @@
 import React from 'react'
-import LoginSignup from './components/LoginSignup/LoginSignup'
+
 import Landing from './components/Landing/Landing'
 import Working from './components/Working/Working'
 import WhyBorrow2Buddy from './components/WhyUs/WhyBorrow2Buddy'

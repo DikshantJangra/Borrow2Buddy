@@ -8,6 +8,7 @@ import SignUp from './components/LoginSignup/SignUp.jsx'
 import Dashboard from './components/Dashboard/Dashboard.jsx'
 import PageNotFound from './components/NotFound/PageNotFound.jsx'
 import Layout from './components/Layout/Layout.jsx'
+import Messages from './components/Messages/Messages.jsx'
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path:'/Layout',
     element:<Layout />
+  },
+  {
+    path:'/Messages',
+    element:<Messages />
   }
 ])
 

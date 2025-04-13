@@ -27,7 +27,7 @@ const SignUp = () => {
                     <div className='pt-15 pb-2'>
                         {/* Buttons */}
                         <button className='bg-[#00AC06] px-4 py-2 rounded-lg mr-3 cursor-pointer'>Sign up</button>
-                        <button className='bg-black px-4 py-2 rounded-lg cursor-pointer'><img className='inline' src="/src/assets/GoogleIco.png" alt="Google Icon" />  Sign up with Google</button>
+                        <button className='bg-black px-4 py-2 rounded-lg cursor-pointer'><img className='inline' src="/GoogleIco.png" alt="Google Icon" />  Sign up with Google</button>
                     </div>
 
                     <p>Already a user? <Link to={'/Login'}> Log in</Link></p>

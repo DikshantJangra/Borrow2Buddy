@@ -292,7 +292,7 @@ const LoginSignup = () => {
           <div className='pt-5 pb-2'>
             <button type="submit" className='bg-[#51902D] px-4 py-2 rounded-lg mr-3'>Log in</button>
             <button type="button" className='bg-black px-4 py-2 rounded-lg' onClick={signInWithGoogle}>
-              <img className='inline mr-2' src="/src/assets/GoogleIco.png" alt="Google Icon" /> Sign in with Google
+              <img className='inline mr-2' src="/GoogleIco.png" alt="Google Icon" /> Sign in with Google
             </button>
           </div>
           <p>Not a user? <Link to={'/SignUp'}>Sign up</Link></p>

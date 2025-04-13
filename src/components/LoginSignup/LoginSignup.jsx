@@ -235,7 +235,7 @@ const LoginSignup = () => {
       try {
         await signInWithEmailAndPassword(auth, formData.email, formData.password);
         console.log("Login Successful");
-        navigate('/Dashboard')
+        navigate('/Layout')
       } catch (error) {
         console.error("Login Error:", error.message);
       }

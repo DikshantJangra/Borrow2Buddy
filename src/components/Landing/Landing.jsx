@@ -4,6 +4,7 @@ import { GiTakeMyMoney } from "react-icons/gi";
 import { FaLongArrowAltRight } from "react-icons/fa";
 
 
+
 const Landing = () => {
   return (
     <>

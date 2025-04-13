@@ -8,31 +8,41 @@ import { FaRegMessage } from "react-icons/fa6";
 import { TbLogout2 } from "react-icons/tb";
 import Dashboard from '../Dashboard/Dashboard';
 import Messages from '../Messages/Messages';
+import Requests from '../Lend & Borrow/Requests';
+import Borrow from '../Lend & Borrow/Borrow';
+import Transactions from '../Transactions/Transactions';
 
 
 const Layout = () => {
   const navigate = useNavigate();
   const [activeComponent, setActiveComponent] = useState(<Dashboard />);
+  const [active, setActive] = useState('dashboard')
 
   const handleNavClick = (component) => {
     switch(component) {
       case 'dashboard':
         setActiveComponent(<Dashboard />);
+        setActive('dashboard')
         break;
       case 'requests':
         setActiveComponent(<Requests />);
+        setActive('requests')
         break;
       case 'borrow':
         setActiveComponent(<Borrow />);
+        setActive('borrow')
         break;
-      case 'transactions':
+      case 'Transactions':
         setActiveComponent(<Transactions />);
+        setActive('Transactions')
         break;
       case 'messages':
         setActiveComponent(<Messages />);
+        setActive('messages')
         break;
       default:
         setActiveComponent(<Dashboard />);
+
     }
   };
   
@@ -57,38 +67,43 @@ const Layout = () => {
 
       {/* Main Content Area */}
       <div className='flex flex-1 overflow-hidden'>
-        {/* Fixed Sidebar */}
-        <div className='flex-none w-64 bg-gray-50 flex flex-col justify-between py-10 text-left'>
-          <div className='flex flex-col gap-2 text-[1.5vmax]'>
+        {/* Collapsible Sidebar */}
+        <div className='group flex-none w-20 hover:w-64 bg-gray-50 flex flex-col justify-between py-10 transition-all duration-300 ease-in-out overflow-hidden'>
+          <div className='flex flex-col gap-4 px-2'>
             <button 
               onClick={() => handleNavClick('dashboard')}
-              className='bg-[#00AC06] px-6 py-2 rounded-2xl text-white text-left'
+              className={`${(active == 'dashboard')&& 'bg-[#00AC06]/80 && text-white'} hover:cursor-pointer p-3 rounded-2xl flex items-center gap-3`}
             >
-              <MdOutlineDashboardCustomize className='inline' /> Dashboard
+              <MdOutlineDashboardCustomize className='text-[1.5vmax] min-w-[1.5vmax]' />
+              <span className='text-[1.5vmax] opacity-0 group-hover:opacity-100 transition-opacity duration-200'>Dashboard</span>
             </button>
             <button 
               onClick={() => handleNavClick('requests')}
-              className='px-6 py-2 rounded-2xl hover:bg-gray-200 text-left'
+              className={`${(active == 'requests')&& 'bg-[#00AC06]/80  && text-white'} hover:cursor-pointer p-3 rounded-2xl flex items-center gap-3`}
             >
-              <MdOutlineRequestPage className='inline' /> Requests
+              <MdOutlineRequestPage className='text-[1.5vmax] min-w-[1.5vmax]' />
+              <span className='text-[1.5vmax] opacity-0 group-hover:opacity-100 transition-opacity duration-200'>Requests</span>
             </button>
             <button 
               onClick={() => handleNavClick('borrow')}
-              className='px-6 py-2 rounded-2xl hover:bg-gray-200 text-left'
+              className={`${(active == 'borrow')&& 'bg-[#00AC06]/80  && text-white'} hover:cursor-pointer p-3 rounded-2xl flex items-center gap-3 duration-300`}
             >
-              <FiPocket className='inline' /> Borrow
+              <FiPocket className='text-[1.5vmax] min-w-[1.5vmax]' />
+              <span className='text-[1.5vmax] opacity-0 group-hover:opacity-100 transition-opacity duration-200'>Borrow</span>
             </button>
             <button 
-              onClick={() => handleNavClick('transactions')}
-              className='px-6 py-2 rounded-2xl hover:bg-gray-200 text-left'
+              onClick={() => handleNavClick('Transactions')}
+              className={`${(active == 'Transactions')&& 'bg-[#00AC06]/80  && text-white'} hover:cursor-pointer p-3 rounded-2xl flex items-center gap-3 duration-300`}
             >
-              <GrTransaction className='inline' /> Transactions
+              <GrTransaction className='text-[1.5vmax] min-w-[1.5vmax]' />
+              <span className='text-[1.5vmax] opacity-0 group-hover:opacity-100 transition-opacity duration-200'>Transactions</span>
             </button>
             <button 
               onClick={() => handleNavClick('messages')}
-              className='px-6 py-2 rounded-2xl hover:bg-gray-200 text-left'
+              className={`${(active == 'messages')&& 'bg-[#00AC06]/80  && text-white'} hover:cursor-pointer p-3 rounded-2xl flex items-center gap-3 duration-300`}
             >
-              <FaRegMessage className='inline' /> Messages
+              <FaRegMessage className='text-[1.5vmax] min-w-[1.5vmax]' />
+              <span className='text-[1.5vmax] opacity-0 group-hover:opacity-100 transition-opacity duration-200'>Messages</span>
             </button>
           </div>
           <div>

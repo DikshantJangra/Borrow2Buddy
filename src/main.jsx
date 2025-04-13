@@ -38,6 +38,9 @@ const router = createBrowserRouter([
   {
     path:'/Messages',
     element:<Messages />
+  },
+  {
+    path:'/requests'
   }
 ])
 

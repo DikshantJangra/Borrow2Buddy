@@ -4,7 +4,7 @@ import { FaMoneyBillTransfer } from "react-icons/fa6";
 const Footer = () => {
   return (
     <div className='h-130 sm:h-110 font-Popins flex justify-center gap-15 bg-[#00AC06]/50'>
-        <div className='h-full hidden bg-cover sm:block w-1/3 bg-no-repeat bg-center bg-[url(/src/assets/footerImg.png)]'></div>
+        <div className='h-full hidden bg-cover sm:block w-1/3 bg-no-repeat bg-center bg-[url(/footerImg.png)]'></div>
         <div className='w-2/3 px-10 py-10'>
             <div className='flex items-center gap-3 text-[#00AC06]'>
                 <span className='text-[5vmax] '><FaMoneyBillTransfer /></span>

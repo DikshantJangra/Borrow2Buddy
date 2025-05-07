@@ -248,7 +248,7 @@ const LoginSignup = () => {
       console.log("Google Sign-In Successful");
       navigate('/Dashboard')
     } catch (error) {
-      console.error("Google Sign-In Error:", error.message);
+         
     }
   };
 

@@ -6,10 +6,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import LoginSignup from './components/LoginSignup/LoginSignup.jsx'
 import SignUp from './components/LoginSignup/SignUp.jsx'
 import Dashboard from './components/Dashboard/Dashboard.jsx'
+import DashboardLayout from './components/Dashboard/DashboardLayout.jsx'
 import PageNotFound from './components/NotFound/PageNotFound.jsx'
 import Layout from './components/Layout/Layout.jsx'
 import Messages from './components/Messages/Messages.jsx'
-
+import Requests from './components/Lend & Borrow/Requests.jsx'
+import Borrow from './components/Lend & Borrow/Borrow.jsx'
+import Transactions from './components/Transactions/Transactions.jsx'
 
 const router = createBrowserRouter([
   {path:'/',
@@ -28,19 +31,52 @@ const router = createBrowserRouter([
   },
   {
     path:'/Dashboard',
-    element:<Dashboard />,
+    element:(
+      <DashboardLayout>
+        <Dashboard />
+      </DashboardLayout>
+    ),
+    errorElement:<PageNotFound />
+  },
+  {
+    path:'/requests',
+    element:(
+      <DashboardLayout>
+        <Requests />
+      </DashboardLayout>
+    ),
+    errorElement:<PageNotFound />
+  },
+  {
+    path:'/borrow',
+    element:(
+      <DashboardLayout>
+        <Borrow />
+      </DashboardLayout>
+    ),
+    errorElement:<PageNotFound />
+  },
+  {
+    path:'/transactions',
+    element:(
+      <DashboardLayout>
+        <Transactions />
+      </DashboardLayout>
+    ),
+    errorElement:<PageNotFound />
+  },
+  {
+    path:'/messages',
+    element:(
+      <DashboardLayout>
+        <Messages />
+      </DashboardLayout>
+    ),
     errorElement:<PageNotFound />
   },
   {
     path:'/Layout',
     element:<Layout />
-  },
-  {
-    path:'/Messages',
-    element:<Messages />
-  },
-  {
-    path:'/requests'
   }
 ])
 
